@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: #F5F5F5;
+    counter-reset: section;
+}
+
+hr {
+    width: 1px;
+    background: black;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+p:before {
+    counter-increment: section;
+    content: "" counter(section) ".";
+    margin-right: 5px;
+}
+
+.article {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.textSection {
+    width: 47%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
